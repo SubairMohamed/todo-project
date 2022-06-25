@@ -1,17 +1,17 @@
-function App() {
+import Left from './components/Asides/Left';
+import Main from './components/Main/Main';
+import Right from './components/Asides/Right';
+
+
+const App = () => {
  return (
   <div className="flex min-h-screen w-screen">
-    {/* aside left */}
-    <aside id="left" className="bg-sky-300 w-20 lg:w-28 flex-none">left</aside>
+    <Left />
 
-    {/* Main */}
-    <section className="bg-teal-500 grow">
-      <header>header</header>
-      <main>main</main>
-    </section>
+    <Main />
 
-    {/* aside right */}
-    <aside id="right" className="bg-gray-400  sm:hidden md:block md:w-60 lg:w-96">right</aside>
+    <Right />
+
   </div>
  );
 }
