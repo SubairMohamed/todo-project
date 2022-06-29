@@ -13,7 +13,9 @@ const Main = () => {
                     <button className="text-sm text-white"><PlusCircleIcon className="h-7 w-7" /></button>
                 </div>
             </header>
-            <main>main</main>
+            <main className="bg-white mx-5 p-2 rounded-lg text-purple-800 shadow-lg shadow-sky-200">
+                main
+            </main>
         </section>
     );
 }
