@@ -1,4 +1,5 @@
 import { PlusCircleIcon } from "@heroicons/react/solid";
+import { CalendarIcon } from '@heroicons/react/outline';
 
 const Main = () => {
     return (
@@ -19,13 +20,21 @@ const Main = () => {
             {/* main */}
             <main className="bg-white mx-5 my-6 card-white">
                 <div id="tasks">
-                    <div id="task" className="card-task border-l-4 border-teal-900">
-                        <div>
-                            <h5>Learning</h5>
+                    <div id="task" className="card-task border-l-4 border-teal-400">
+                        <div id="left-side">
+                            <div id="category">
+                                <h5 className="tracking-wide">Learning</h5>
+                            </div>
+                            <div id="content" className="mt-1">
+                                <h1 className="tracking-wide font-bold mb-1">Learning MERN Stack</h1>
+                                <div className="flex items-center gap-2">
+                                    <CalendarIcon className="h-5 w-5" />
+                                    <span className="tracking-wide">2022/6/30</span>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h1>Learning MERN Stack</h1>
-                            <span>2022/6/30</span>
+                        <div id="right-side">
+
                         </div>
                     </div>
                 </div>
