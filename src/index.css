@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-white {
+    @apply p-2 rounded-lg text-purple-800 shadow-lg shadow-sky-200
+}
+
+.card-task {
+    @apply bg-teal-600 mx-2 my-3 p-2 rounded-lg text-purple-800 shadow-md shadow-sky-200
+}
