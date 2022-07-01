@@ -9,5 +9,5 @@
 }
 
 .card-task {
-    @apply bg-purple-800 mx-2 my-3 p-2 rounded-lg text-white shadow-md shadow-sky-200
+    @apply bg-purple-800 mx-2 my-3 p-2 rounded-lg text-white shadow-md shadow-purple-400
 }
