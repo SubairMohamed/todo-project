@@ -20,6 +20,7 @@ const Main = () => {
             {/* main */}
             <main className="bg-white mx-5 my-6 card-white">
                 <div id="tasks" className="bg-sky-900 rounded-lg flex flex-col items-center justify-center px-2 py-2">
+                    <h1 className="text-white text-2xl font-bold capitalize border-b pb-1 tracking-wider w-full max-w-lg">lists</h1>
                     <div id="task" className="card-task border-l-4 border-teal-400 flex items-center justify-between max-w-lg w-full opacity-75">
                         <div id="left-side">
                             <div id="category">
