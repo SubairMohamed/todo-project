@@ -1,7 +1,9 @@
 import Header from './Header';
 import Content from './Content/Content';
 
-const Main = () => {
+const Main = (props) => {
+    console.log(props);
+
     return (
         // Main
         <section className="grow font-RobotoSlab">
