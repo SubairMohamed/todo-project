@@ -1,11 +1,14 @@
 import Tasks from './Tasks/Tasks';
 
-const Content = () => {
+const Content = (props) => {
+
+    console.log("content", props)
+
     return (
         // Main
 
         <main className="bg-white mx-5 my-6 card-white">
-            <Tasks />
+            <Tasks data={props.tasks} />
 
         </main>
     );

@@ -1,15 +1,17 @@
 import Header from './Header';
 import Content from './Content/Content';
+import Tasks from './Content/Tasks/Tasks';
 
 const Main = (props) => {
-    console.log(props);
+    console.log("Main", props)
+
 
     return (
         // Main
         <section className="grow font-RobotoSlab">
 
             <Header />
-            <Content />
+            <Content tasks={props.tasks} />
 
 
         </section>

@@ -6,8 +6,8 @@ import Right from './components/Asides/Right';
 const App = () => {
   const tasks = [
     {
-      category: "learn",
-      content: "going university",
+      category: "learning",
+      content: "going to university",
       date: "2022-02-28",
     },
     {
@@ -16,6 +16,8 @@ const App = () => {
       date: "2023-06-15",
     },
   ];
+
+console.log("App",tasks)
 
 
  return (
