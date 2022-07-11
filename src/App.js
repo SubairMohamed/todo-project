@@ -17,7 +17,7 @@ const App = () => {
     },
   ];
 
-console.log("App",tasks)
+// console.log("App",tasks)
 
 
  return (

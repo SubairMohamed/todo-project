@@ -2,13 +2,13 @@ import Tasks from './Tasks/Tasks';
 
 const Content = (props) => {
 
-    console.log("content", props)
+    // console.log("content", props)
 
     return (
         // Main
 
         <main className="bg-white mx-5 my-6 card-white">
-            <Tasks data={props.tasks} />
+            <Tasks tasks={props.tasks} />
 
         </main>
     );

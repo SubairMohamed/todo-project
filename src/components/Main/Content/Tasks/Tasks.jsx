@@ -2,7 +2,7 @@ import Task from './Task'
 
 const Tasks = (props) => {
 
-    console.log("Tasks", props)
+    // console.log("Tasks", props)
 
     return (
         //    Tasks 
@@ -10,9 +10,9 @@ const Tasks = (props) => {
             <h1 className="text-white text-2xl font-bold capitalize border-b pb-1 tracking-wider w-full max-w-lg">lists</h1>
 
             <div id='Lists' className='w-full flex flex-col items-center justify-center'>
-                <Task category={props.data[0].category}
-                    content={props.data[0].content}
-                    date={props.data[0].date} />
+                <Task category={props.tasks[0].category}
+                    content={props.tasks[0].content}
+                    date={props.tasks[0].date} />
             </div>
 
         </div >
