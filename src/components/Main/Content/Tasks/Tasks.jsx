@@ -24,7 +24,6 @@ const Tasks = (props) => {
                     );
                 })}
 
-
             </div>
 
         </div >
