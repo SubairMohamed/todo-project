@@ -25,6 +25,9 @@ const Form = () => {
                         <option value="Completed">Completed</option>
                     </select>
                 </div>
+                <div className="flex justify-center col-span-2 mr-20">
+                    <button className="bg-blue-500 px-1 py-1 text-lg text-white font-bold tracking-wide rounded-full w-20 hover:bg-blue-700">Add</button>
+                </div>
             </form>
         </section>
     );
