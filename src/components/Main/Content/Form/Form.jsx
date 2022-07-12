@@ -20,7 +20,7 @@ const Form = () => {
                 <div>
                     <label htmlFor='status' className="input-label">Status:</label>
                     <select className="input-control">
-                        <option disabled>Choose Status</option>
+                        <option disabled value="" selected>Choose Status</option>
                         <option value="In Progress">In Progress</option>
                         <option value="Completed">Completed</option>
                     </select>
