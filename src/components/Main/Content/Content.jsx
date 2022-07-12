@@ -9,9 +9,9 @@ const Content = (props) => {
         // Main
 
         <main className="bg-white mx-5 my-6 card-white">
-            <section id='form'>
-                <Form />
-            </section>
+
+            <Form />
+
 
             <Tasks tasks={props.tasks} />
 
