@@ -9,3 +9,7 @@
 .input-label {
     @apply text-lg font-bold tracking-wide mx-1;
 }
+
+.btn-add {
+    @apply bg-purple-500 px-1 py-1 text-lg text-white font-bold tracking-wide rounded-full w-24 hover:bg-teal-500;
+}
