@@ -3,7 +3,7 @@
 }
 
 .input-control {
-    @apply px-2 text-black rounded-xl focus:outline-none focus:bg-white focus:border focus:border-sky-900;
+    @apply px-2 text-black rounded-xl focus:outline-none focus:bg-white focus:border focus:border-sky-900 ;
 }
 
 .input-label {
