@@ -61,7 +61,7 @@ const Form = () => {
                         <option value="Completed">Completed</option>
                     </select>
                 </div>
-                <div className="flex justify-center col-span-2 mr-36">
+                <div className="flex justify-center md:col-span-2 mr-36">
                     <button className="btn-add">Add</button>
                 </div>
             </form>
