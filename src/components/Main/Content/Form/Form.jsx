@@ -1,7 +1,8 @@
+import PreviousMap from "postcss/lib/previous-map";
 import { useState } from "react";
 import "./Form.css";
 
-const Form = () => {
+const Form = (props) => {
 
     const [title, setTitle] = useState("");
     const [category, setCategory] = useState("");
@@ -23,12 +24,17 @@ const Form = () => {
 
     const submitFormHandler = (e) => {
         e.preventDefault();
-        console.log({
-            title,
-            category,
-            date,
-            status,
-        });
+        // console.log({
+        //     title,
+        //     category,
+        //     date,
+        //     status,
+        // });
+
+        const data = { title, category, date, status, };
+
+        props.childToparent(data);
+
     };
 
     return (

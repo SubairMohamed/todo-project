@@ -3,6 +3,9 @@ import Form from "./Form/Form";
 
 const Content = (props) => {
 
+    const childToparent = (data) => {
+        console.log("your content data: ", data);
+    }
 
 
     return (
@@ -10,7 +13,7 @@ const Content = (props) => {
 
         <main className="bg-white mx-5 my-6 card-white">
 
-            <Form />
+            <Form childToparent={childToparent} />
 
 
             <Tasks tasks={props.tasks} />
