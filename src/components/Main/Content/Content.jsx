@@ -3,7 +3,7 @@ import Form from "./Form/Form";
 
 const Content = (props) => {
 
-    // console.log("content", props)
+
 
     return (
         // Main

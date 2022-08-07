@@ -3,7 +3,6 @@ import Content from './Content/Content';
 import Tasks from './Content/Tasks/Tasks';
 
 const Main = (props) => {
-    // console.log("Main", props)
 
 
     return (

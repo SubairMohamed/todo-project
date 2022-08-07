@@ -2,7 +2,6 @@ import { CalendarIcon, CheckIcon, TrashIcon } from '@heroicons/react/outline';
 
 const Task = (props) => {
 
-    // console.log("task", props);
 
     return (
         // Task 

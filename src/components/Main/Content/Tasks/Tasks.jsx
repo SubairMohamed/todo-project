@@ -4,7 +4,6 @@ const Tasks = (props) => {
 
     const tasks = props.tasks;
 
-    // console.log("Tasks", props)
 
     return (
         //    Tasks 
