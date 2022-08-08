@@ -31,7 +31,13 @@ const Form = (props) => {
         //     status,
         // });
 
-        const data = { title, category, date, status, };
+        // const data = { title, category, date, status, };
+        const data = {
+            title: title,
+            category: category,
+            date: date,
+            status: status,
+        }
 
         props.childToparent(data);
 

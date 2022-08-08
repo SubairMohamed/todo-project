@@ -4,8 +4,21 @@ import Form from "./Form/Form";
 const Content = (props) => {
 
     const childToparent = (data) => {
-        console.log("your content data: ", data);
-    }
+
+        const id = Math.floor(Math.random() * 1000);
+
+
+
+        const taskdata = {
+            id: "t -" + id,
+            title: data.title,
+            category: data.category,
+            date: data.date,
+            status: data.status,
+        }
+
+        console.log("your new object: ", taskdata);
+    };
 
 
     return (
