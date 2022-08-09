@@ -8,7 +8,7 @@ const Main = (props) => {
         // console.log(data);
         props.onUploadData(data); // waa app.js ka 
     }
-
+    console.log(props.tasks);
     return (
         // Main
         <section className="grow font-RobotoSlab">

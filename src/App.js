@@ -1,10 +1,12 @@
+import {useState} from 'react';
 import Left from './components/Asides/Left';
 import Main from './components/Main/Main';
 import Right from './components/Asides/Right';
 
 
+
 const App = () => {
-  const tasks = [
+  const data = [
     {
       id: "t-01",
       category: "learning",
@@ -21,10 +23,12 @@ const App = () => {
     },
   ];
 
-  const SaveUploadData = (data) => {
-     tasks.push(data);
+  const [tasks, setTasks] = useState(data);
 
-     console.log(tasks);
+  const SaveUploadData = (data) => {
+     setTasks((previewState) => {
+      return [...previewState,data];
+     });
   }
 
 
