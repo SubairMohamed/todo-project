@@ -6,7 +6,7 @@ const Main = (props) => {
 
     const uploadDataHandler = (data) => {
         // console.log(data);
-        props.onUploadData(data);
+        props.onUploadData(data); // waa app.js ka 
     }
 
     return (
