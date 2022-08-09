@@ -21,13 +21,18 @@ const App = () => {
     },
   ];
 
+  const SaveUploadData = (data) => {
+     tasks.push(data);
+
+     console.log(tasks);
+  }
 
 
  return (
   <div className="flex min-h-screen w-screen bg-sky-900">
     <Left />
 
-    <Main tasks={tasks}/>
+    <Main onUploadData={SaveUploadData}  tasks={tasks}/>
 
     <Right />
 

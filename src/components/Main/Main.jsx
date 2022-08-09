@@ -5,7 +5,8 @@ import Tasks from './Content/Tasks/Tasks';
 const Main = (props) => {
 
     const uploadDataHandler = (data) => {
-        console.log(data);
+        // console.log(data);
+        props.onUploadData(data);
     }
 
     return (
