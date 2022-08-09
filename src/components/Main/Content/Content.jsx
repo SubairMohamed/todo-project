@@ -7,10 +7,8 @@ const Content = (props) => {
 
         const id = Math.floor(Math.random() * 1000);
 
-
-
         const taskdata = {
-            id: "t -" + id,
+            id: "t-" + id,
             title: data.title,
             category: data.category,
             date: data.date,
@@ -18,6 +16,8 @@ const Content = (props) => {
         }
 
         console.log("your new object: ", taskdata);
+
+        props.onUploadData(taskdata);
     };
 
 

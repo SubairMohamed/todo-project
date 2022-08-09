@@ -4,13 +4,16 @@ import Tasks from './Content/Tasks/Tasks';
 
 const Main = (props) => {
 
+    const uploadDataHandler = (data) => {
+        console.log(data);
+    }
 
     return (
         // Main
         <section className="grow font-RobotoSlab">
 
             <Header />
-            <Content tasks={props.tasks} />
+            <Content onUploadData={uploadDataHandler} tasks={props.tasks} />
 
 
         </section>
