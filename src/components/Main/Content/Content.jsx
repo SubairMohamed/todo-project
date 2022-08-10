@@ -15,7 +15,7 @@ const Content = (props) => {
             status: data.status,
         }
 
-        console.log("your new object content: ", taskdata);
+        // console.log("your new object content: ", taskdata);
 
         props.onUploadData(taskdata);
     };

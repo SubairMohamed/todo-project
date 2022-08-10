@@ -6,9 +6,9 @@ const Main = (props) => {
 
     const uploadDataHandler = (data) => {
         // console.log(data);
-        props.onUploadData(data); // waa app.js ka 
+        props.subeer(data); // waa app.js ka 
     }
-    console.log(props.tasks);
+    // console.log(props.tasks); //wuxu kuu cadeen doonaa u inuu main ku data ay soo gaadhay
     return (
         // Main
         <section className="grow font-RobotoSlab">

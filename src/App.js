@@ -36,7 +36,7 @@ const App = () => {
   <div className="flex min-h-screen w-screen bg-sky-900">
     <Left />
 
-    <Main onUploadData={SaveUploadData}  tasks={tasks}/>
+    <Main subeer={SaveUploadData}  tasks={tasks}/>
 
     <Right />
 
