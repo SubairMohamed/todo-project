@@ -16,8 +16,8 @@ const Tasks = (props) => {
                     return (
                         <Task
                             key={tasks.id}
+                            title={tasks.title}
                             category={tasks.category}
-                            content={tasks.content}
                             date={tasks.date}
                             status={tasks.status} />
                     );

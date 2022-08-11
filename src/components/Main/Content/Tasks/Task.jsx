@@ -8,10 +8,10 @@ const Task = (props) => {
         <div id="task" className="card-task border-l-4 border-teal-400 flex items-center justify-between max-w-lg w-full opacity-75 relative">
             <div id="left-side">
                 <div id="category">
-                    <h5 className="tracking-wide">{props.category}</h5>
+                    <h5 className="tracking-wide">{props.title}</h5>
                 </div>
                 <div id="content" className="mt-1">
-                    <h1 className="tracking-wide font-bold mb-1">{props.content}</h1>
+                    <h1 className="tracking-wide font-bold mb-1">{props.category}</h1>
                     <div className="flex items-center gap-2 mb-5">
                         <CalendarIcon className="h-5 w-5" />
                         <span className="tracking-wide">{props.date}</span>
