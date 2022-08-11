@@ -8,7 +8,7 @@ const Task = (props) => {
         <div id="task" className="card-task border-l-4 border-teal-400 flex items-center justify-between max-w-lg w-full opacity-75 relative">
             <div id="left-side">
                 <div id="category">
-                    <h5 className="tracking-wide">{props.title}</h5>
+                    <h5 className="tracking-wide underline">{props.title}</h5>
                 </div>
                 <div id="content" className="mt-1">
                     <h1 className="tracking-wide font-bold mb-1">{props.category}</h1>

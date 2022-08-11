@@ -13,3 +13,7 @@
 .btn-add {
     @apply bg-purple-500 px-1 py-1 text-lg text-white font-bold tracking-wide rounded-full w-24 hover:bg-teal-500;
 }
+
+.btn-cancel {
+    @apply bg-teal-500 px-1 py-1 text-lg text-white font-bold capitalize tracking-wide rounded-full w-24 hover:bg-purple-500;
+}

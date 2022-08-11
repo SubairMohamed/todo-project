@@ -41,6 +41,11 @@ const Form = (props) => {
 
         props.childToparent(data);
 
+        setTitle('');
+        setCategory('');
+        setDate('');
+        setStatus('');
+
     };
 
     return (
@@ -73,8 +78,9 @@ const Form = (props) => {
                         <option value="Completed">Completed</option>
                     </select>
                 </div>
-                <div className="flex justify-center md:col-span-2 mr-36">
+                <div className="flex justify-center md:col-span-2 mr-36 gap-3">
                     <button className="btn-add">Add</button>
+                    <button className="btn-cancel">cancel</button>
                 </div>
             </form>
         </section>
