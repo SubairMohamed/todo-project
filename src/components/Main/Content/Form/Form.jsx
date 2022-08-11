@@ -64,6 +64,8 @@ const Form = (props) => {
                         <option value="going to travel">going to travel</option>
                         <option value="going to studying">going to studying</option>
                         <option value="going to work">going to work</option>
+                        <option value="Making Exercise">Making Exercise</option>
+                        <option value="Using Social Media">Using Social Media</option>
                     </select>
                 </div>
                 <div className="input-group">
