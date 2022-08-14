@@ -9,9 +9,9 @@ const Tasks = (props) => {
     return (
         //    Tasks 
         < div id="tasks" className="bg-sky-900 rounded-lg flex flex-col items-center justify-center shadow-lg shadow-sky-900 px-2 py-3 mb-3 relative">
-            <div>
-                <button className='bg-teal-500 text-white rounded-full'><PlusIcon className='w-4 h-4'></PlusIcon></button>
-            </div>
+            {props.showform === true ? '' : <div>
+                <button onClick={props.onShowForm} className='bg-teal-500 text-white rounded-full absolute top-0'><PlusIcon className='w-4 h-4'></PlusIcon></button>
+            </div>}
             <h1 className="text-teal-500 text-2xl font-bold capitalize underline pb-1 tracking-wider w-full max-w-lg">lists</h1>
 
             <div id='Lists' className='w-full flex flex-col items-center justify-center'>

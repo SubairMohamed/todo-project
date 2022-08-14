@@ -23,6 +23,10 @@ const Content = (props) => {
         props.onUploadData(taskdata);
     };
 
+    const ShowForm = () => {
+        setShowform(true);
+    }
+
     const closeform = () => {
         setShowform(false);
     }
@@ -36,7 +40,8 @@ const Content = (props) => {
         <main className="bg-white mx-5 my-6 card-white">
 
             {showform === true ? <Form childToparent={childToparent} oncloseform={closeform} /> : ''}
-            <Tasks tasks={props.tasks} />
+
+            <Tasks showform={showform} onShowForm={ShowForm} tasks={props.tasks} />
 
         </main>
     );
