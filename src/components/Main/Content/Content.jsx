@@ -1,7 +1,10 @@
 import Tasks from './Tasks/Tasks';
 import Form from "./Form/Form";
+import { useState } from 'react';
 
 const Content = (props) => {
+
+    const [showform, setShowform] = useState(true);
 
     const childToparent = (data) => {
 
@@ -20,15 +23,19 @@ const Content = (props) => {
         props.onUploadData(taskdata);
     };
 
+    const closeform = () => {
+        setShowform(false);
+    }
+
+
+
 
     return (
         // Main
 
         <main className="bg-white mx-5 my-6 card-white">
 
-            <Form childToparent={childToparent} />
-
-
+            {showform === true ? <Form childToparent={childToparent} oncloseform={closeform} /> : ''}
             <Tasks tasks={props.tasks} />
 
         </main>

@@ -1,4 +1,4 @@
-import PreviousMap from "postcss/lib/previous-map";
+
 import { useState } from "react";
 import "./Form.css";
 
@@ -48,6 +48,11 @@ const Form = (props) => {
 
     };
 
+
+    const getshowform = () => {
+        props.oncloseform();
+    }
+
     return (
         <section id='form' className="card-gray w-full my-3">
             <h1 className="text-2xl font-bold tracking-wide capitalize mb-3 text-teal-600 underline">add new task</h1>
@@ -82,7 +87,7 @@ const Form = (props) => {
                 </div>
                 <div className="flex justify-center md:col-span-2 mr-36 gap-3">
                     <button className="btn-add">Add</button>
-                    <button className="btn-cancel">cancel</button>
+                    <button onClick={getshowform} className="btn-cancel">cancel</button>
                 </div>
             </form>
         </section>
