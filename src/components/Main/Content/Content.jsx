@@ -39,7 +39,7 @@ const Content = (props) => {
         <main className="bg-white mx-5 my-6 card-white">
 
             {showform === true ? <Form childToparent={childToparent} oncloseform={closeform} /> : ''}
-            <Tasks Onopenform={openform} tasks={props.tasks} />
+            <Tasks Onopenform={openform} showform={showform} tasks={props.tasks} />
 
         </main>
     );
