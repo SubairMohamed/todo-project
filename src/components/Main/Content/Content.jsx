@@ -4,7 +4,8 @@ import { useState } from 'react';
 
 const Content = (props) => {
 
-    const [showform, setShowform] = useState(true);
+    const [showform, setShowForm] = useState(true);
+
 
     const childToparent = (data) => {
 
@@ -23,15 +24,13 @@ const Content = (props) => {
         props.onUploadData(taskdata);
     };
 
-    const ShowForm = () => {
-        setShowform(true);
+    const openform = () => {
+        setShowForm(true);
     }
 
     const closeform = () => {
-        setShowform(false);
+        setShowForm(false);
     }
-
-
 
 
     return (
@@ -40,8 +39,7 @@ const Content = (props) => {
         <main className="bg-white mx-5 my-6 card-white">
 
             {showform === true ? <Form childToparent={childToparent} oncloseform={closeform} /> : ''}
-
-            <Tasks showform={showform} onShowForm={ShowForm} tasks={props.tasks} />
+            <Tasks Onopenform={openform} tasks={props.tasks} />
 
         </main>
     );
