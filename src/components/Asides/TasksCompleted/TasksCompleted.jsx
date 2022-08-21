@@ -3,24 +3,9 @@ import { ClipboardCheckIcon } from '@heroicons/react/outline'
 import TaskComplete from './TaskComplete';
 
 
-const TasksCompleted = () => {
+const TasksCompleted = (props) => {
 
-    const data = [
-        {
-            id: "t-01",
-            title: "learning",
-            category: "going to university",
-            date: "2022-02-28",
-            status: "in progress",
-        },
-        {
-            id: "t-02",
-            title: "work",
-            category: "going work",
-            date: "2023-06-15",
-            status: "completed",
-        },
-    ];
+    const tasksCompleted = props.data.filter((tasks) => tasks.isCompleted === true);
 
     return (
         <section id="completed-tasks" className='mt-3 mx-3 p-1 font-RobotoSlab'>
@@ -30,7 +15,8 @@ const TasksCompleted = () => {
             </div>
             <hr />
             <div>
-                {data.map((task) => (<TaskComplete
+                {tasksCompleted.map((task) => (<TaskComplete
+                    key={task.id}
                     title={task.title}
                     category={task.category}
                     date={task.date}

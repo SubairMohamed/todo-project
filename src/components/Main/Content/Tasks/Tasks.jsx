@@ -2,7 +2,7 @@ import Task from './Task'
 import { PlusIcon } from '@heroicons/react/solid'
 const Tasks = (props) => {
 
-    const tasks = props.tasks;
+    const tasks = props.tasks.filter((tasks) => tasks.isCompleted === false)
 
 
     return (

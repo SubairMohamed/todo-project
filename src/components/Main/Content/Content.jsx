@@ -17,6 +17,7 @@ const Content = (props) => {
             category: data.category,
             date: data.date,
             status: data.status,
+            isCompleted: false,
         }
 
         // console.log("your new object content: ", taskdata);
