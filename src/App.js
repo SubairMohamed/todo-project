@@ -34,7 +34,7 @@ const App = () => {
   }
 
   const taskCompletedHandler = (taskid) => {
-    console.log(taskid);
+    console.log(taskid, "task id ");
   }
 
 
