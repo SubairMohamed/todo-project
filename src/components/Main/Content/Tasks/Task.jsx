@@ -3,6 +3,7 @@ import { CalendarIcon, CheckIcon, TrashIcon } from '@heroicons/react/outline';
 const Task = (props) => {
 
 
+
     return (
         // Task 
         <div id="task" className="card-task border-l-4 border-teal-400 flex items-center justify-between max-w-lg w-full opacity-75 relative">

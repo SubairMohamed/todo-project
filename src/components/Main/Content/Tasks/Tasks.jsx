@@ -22,7 +22,8 @@ const Tasks = (props) => {
                             title={tasks.title}
                             category={tasks.category}
                             date={tasks.date}
-                            status={tasks.status} />
+                            status={tasks.status}
+                            istaskCompleted={props.istaskCompleted} />
                     );
                 })}
 

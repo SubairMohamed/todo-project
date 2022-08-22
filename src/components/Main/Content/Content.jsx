@@ -33,6 +33,10 @@ const Content = (props) => {
         setShowForm(false);
     }
 
+    const istaskCompleted = (id) => {
+        console.log(id);
+        //   props.ontaskCompleted(id);
+    }
 
     return (
         // Main
@@ -40,7 +44,7 @@ const Content = (props) => {
         <main className="bg-white mx-5 my-6 card-white">
 
             {showform === true ? <Form childToparent={childToparent} oncloseform={closeform} /> : ''}
-            <Tasks Onopenform={openform} showform={showform} tasks={props.tasks} />
+            <Tasks Onopenform={openform} showform={showform} tasks={props.tasks} istaskCompleted={istaskCompleted} />
 
         </main>
     );

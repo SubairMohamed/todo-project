@@ -33,12 +33,16 @@ const App = () => {
     });
   }
 
+  const taskCompletedHandler = (taskid) => {
+    console.log(taskid);
+  }
+
 
   return (
     <div className="flex min-h-screen w-screen bg-sky-900">
       <Left />
 
-      <Main onUploadData={SaveUploadData} tasks={tasks} />
+      <Main onUploadData={SaveUploadData} tasks={tasks}  ontaskCompleted={taskCompletedHandler}/>
 
       <Right data={data} />
 
