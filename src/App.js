@@ -44,10 +44,17 @@ const App = () => {
         isCompleted: true,
         status: "Completed",
       }
+      // console.log(task, "this is update task", taskUpdate);
 
-      console.log(task, "this is update task", taskUpdate);
+      const taskIndex = prevstate.findIndex((task) => task.id === taskid);
+      // wxn ku soo saranayay indexex ka
+      // console.log(taskIndex);
+      // console.log(prevstate);
 
-      return tasks;
+      const prevUpdate = [...prevstate];
+      prevUpdate[taskIndex] = taskUpdate;
+
+      return prevUpdate;
     });
   }
 
@@ -56,7 +63,7 @@ const App = () => {
     <div className="flex min-h-screen w-screen bg-sky-900">
       <Left />
 
-      <Main onUploadData={SaveUploadData} tasks={tasks}  ontaskCompleted={taskCompletedHandler}/>
+      <Main onUploadData={SaveUploadData} tasks={tasks} ontaskCompleted={taskCompletedHandler} />
 
       <Right data={data} />
 
