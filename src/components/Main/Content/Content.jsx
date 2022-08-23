@@ -34,8 +34,8 @@ const Content = (props) => {
     }
 
     const istaskCompleted = (id) => {
-        console.log(id);
-        //   props.ontaskCompleted(id);
+        // console.log(id);
+        props.ontaskCompleted(id);
     }
 
     return (

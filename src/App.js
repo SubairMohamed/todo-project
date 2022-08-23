@@ -34,7 +34,21 @@ const App = () => {
   }
 
   const taskCompletedHandler = (taskid) => {
-    console.log(taskid, "task id ");
+    // console.log(taskid, "task id "); wn ku baadhayay idga
+    setTasks((prevstate) => {
+      // console.log(prevstate, taskid);
+      const task = prevstate.find((task) => task.id === taskid);
+
+      const taskUpdate = {
+        ...task,
+        isCompleted: true,
+        status: "Completed",
+      }
+
+      console.log(task, "this is update task", taskUpdate);
+
+      return tasks;
+    });
   }
 
 
