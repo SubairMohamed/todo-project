@@ -62,15 +62,15 @@ const Form = (props) => {
     return (
         <section id='form' className="card-gray w-full my-3">
             <h1 className="text-2xl font-bold tracking-wide capitalize mb-3 text-teal-600 underline">add new task</h1>
-            <form onSubmit={submitFormHandler} className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <form onSubmit={submitFormHandler} className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div className="input-group">
                     <label htmlFor='title' className="input-label">Title:</label>
-                    <input type="text" name="text" id='title' className="input-control" value={title} onChange={titleChangeHandler}></input>
+                    <input type="text" name="text" id='title' className="input-control" value={title} onChange={titleChangeHandler} required></input>
                 </div>
                 <div className="input-group">
                     <label htmlFor='category' className="input-label ">Category:</label>
-                    <select name="category" className="input-control" value={category} onChange={categoryChangeHandler}>
-                        <option defaultValue="" className="text-gray-500">Choose Category</option>
+                    <select name="category" className="input-control mr-3" value={category} onChange={categoryChangeHandler} required>
+                        <option disabled value="" className="text-gray-500">Choose Category</option>
                         <option value="going to trip">going to trip</option>
                         <option value="going to travel">going to travel</option>
                         <option value="going to studying">going to studying</option>
@@ -81,12 +81,12 @@ const Form = (props) => {
                 </div>
                 <div className="input-group">
                     <label htmlFor='date' className="input-label">Date:</label>
-                    <input type="date" name="date" id='date' className="input-control" value={date} onChange={dateChangeHandler}></input>
+                    <input type="date" name="date" id='date' className="input-control" value={date} onChange={dateChangeHandler} required></input>
                 </div>
                 <div>
                     <label htmlFor='status' className="input-label">Status:</label>
-                    <select name="status" className="input-control" value={status} onChange={statusChangeHandler}>
-                        <option defaultValue="" className="text-gray-500">Choose Status</option>
+                    <select name="status" className="input-control" value={status} onChange={statusChangeHandler} required>
+                        <option disabled value="">Choose Status</option>
                         <option value="In Progress">In Progress</option>
                         <option value="Completed">Completed</option>
                     </select>
