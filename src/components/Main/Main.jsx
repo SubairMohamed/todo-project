@@ -14,7 +14,10 @@ const Main = (props) => {
         <section className="grow font-RobotoSlab">
 
             <Header />
-            <Content onUploadData={uploadDataHandler} tasks={props.tasks} ontaskCompleted={props.ontaskCompleted} />
+            <Content onUploadData={uploadDataHandler}
+                tasks={props.tasks}
+                ontaskCompleted={props.ontaskCompleted}
+                taskDeletedHandler={props.taskDeletedHandler} />
 
 
         </section>

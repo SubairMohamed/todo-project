@@ -38,13 +38,21 @@ const Content = (props) => {
         props.ontaskCompleted(id);
     }
 
+    const istaskDeleted = (id) => {
+        props.taskDeletedHandler(id);
+    }
+
     return (
         // Main
 
         <main className="bg-white mx-5 my-6 card-white">
 
             {showform === true ? <Form childToparent={childToparent} oncloseform={closeform} /> : ''}
-            <Tasks Onopenform={openform} showform={showform} tasks={props.tasks} istaskCompleted={istaskCompleted} />
+            <Tasks Onopenform={openform}
+                showform={showform}
+                tasks={props.tasks}
+                istaskCompleted={istaskCompleted}
+                istaskDeleted={istaskDeleted} />
 
         </main>
     );

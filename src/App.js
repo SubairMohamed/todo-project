@@ -58,12 +58,19 @@ const App = () => {
     });
   }
 
+  const taskDeletedHandler = (taskid) => {
+    console.log(taskid);
+  }
+
 
   return (
     <div className="flex min-h-screen w-screen bg-sky-900">
       <Left />
 
-      <Main onUploadData={SaveUploadData} tasks={tasks} ontaskCompleted={taskCompletedHandler} />
+      <Main onUploadData={SaveUploadData}
+        tasks={tasks}
+        ontaskCompleted={taskCompletedHandler}
+        taskDeletedHandler={taskDeletedHandler} />
 
       <Right data={data} />
 

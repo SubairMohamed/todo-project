@@ -6,6 +6,9 @@ const Task = (props) => {
         props.istaskCompleted(props.id);
     }
 
+    const taskDeleted = () => {
+        props.istaskDeleted(props.id);
+    }
 
 
     return (
@@ -28,7 +31,7 @@ const Task = (props) => {
             </div>
             <div id="right-side" className="flex flex-col items-center justify-center gap-1">
                 <CheckIcon className="h-6 w-6 cursor-pointer text-green-500" onClick={taskCompleted} />
-                <TrashIcon className="h-6 w-6 cursor-pointer text-red-500" />
+                <TrashIcon className="h-6 w-6 cursor-pointer text-red-500" onClick={taskDeleted} />
             </div>
         </div>
     );
