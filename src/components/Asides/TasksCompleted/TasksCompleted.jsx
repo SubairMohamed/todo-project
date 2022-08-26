@@ -4,6 +4,7 @@ import TaskComplete from './TaskComplete';
 
 
 const TasksCompleted = (props) => {
+   // const data = [{}]; ayan ka siinayay data ii taala app ka, imikana wxn ka siinaya habka props 
 
     const tasksCompleted = props.data.filter((tasks) => tasks.isCompleted === true);
 
