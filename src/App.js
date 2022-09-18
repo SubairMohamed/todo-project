@@ -58,7 +58,7 @@ const App = () => {
 
       return prevUpdate;
     });
-  }
+  };
 
   const taskDeletedHandler = (taskid) => {
     // console.log(taskid);
@@ -70,11 +70,31 @@ const App = () => {
 
       return prevUpdate;
     })
-  }
+  };
 
   const taskUndoHandler = (taskid) => {
-    console.log(taskid);
-  }
+    // console.log(taskid);
+
+    setTasks((prevState) => {
+      const taskUndo = prevState.find((task) => task.id === taskid);
+
+      // console.log(taskUndo);
+
+      const taskUpdate = {
+        ...tasks,
+        isCompleted: false,
+        status: "in progress",
+      }
+
+      const taskIndex = prevState.findIndex((task) => task.id === taskid);
+      // console.log(taskIndex, taskUpdate);
+
+      const prevUpdate = [...prevState];
+      prevUpdate[taskIndex] = taskUpdate;
+
+      return prevUpdate;
+    })
+  };
 
 
   return (

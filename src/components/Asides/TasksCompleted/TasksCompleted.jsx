@@ -9,9 +9,9 @@ const TasksCompleted = (props) => {
     const tasksCompleted = props.data.filter((tasks) => tasks.isCompleted === true);
 
     const istaskUndo = (id) => {
-        console.log(id);
+        // console.log(id);
 
-        // props.ontaskUndo(id);
+        props.ontaskUndo(id);
 
     }
 
@@ -23,14 +23,18 @@ const TasksCompleted = (props) => {
             </div>
             <hr />
             <div>
-                {tasksCompleted.map((task) => (<TaskComplete
-                    key={task.id}
-                    title={task.title}
-                    category={task.category}
-                    date={task.date}
-                    status={task.status}
-                    ontaskUndo={istaskUndo} />
-                ))}
+                {tasksCompleted.map((task) => {
+                    return (
+                        <TaskComplete
+                            key={task.id}
+                            title={task.title}
+                            category={task.category}
+                            date={task.date}
+                            status={task.status}
+                            id={task.id}
+                            istaskUndo={istaskUndo} />
+                    );
+                })}
             </div>
         </section>
     );

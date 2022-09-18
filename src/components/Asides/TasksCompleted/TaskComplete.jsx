@@ -4,7 +4,7 @@ import { ReplyIcon } from '@heroicons/react/solid';
 const TasksCompleted = (props) => {
 
     const istaskCompletedUndo = () => {
-        props.ontaskUndo(props.id);
+        props.istaskUndo(props.id);
     }
 
     return (
