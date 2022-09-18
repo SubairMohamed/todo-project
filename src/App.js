@@ -35,9 +35,9 @@ const App = () => {
 
   const taskCompletedHandler = (taskid) => {
     // console.log(taskid, "task id "); wn ku baadhayay idga
-    setTasks((prevstate) => {
+    setTasks((prevState) => {
       // console.log(prevstate, taskid);
-      const task = prevstate.find((task) => task.id === taskid);
+      const task = prevState.find((task) => task.id === taskid);
 
       const taskUpdate = {
         ...task,
@@ -46,19 +46,33 @@ const App = () => {
       }
       // console.log(task, "this is update task", taskUpdate);
 
-      const taskIndex = prevstate.findIndex((task) => task.id === taskid);
+      const taskIndex = prevState.findIndex((task) => task.id === taskid);
       // wxn ku soo saranayay indexex ka
       // console.log(taskIndex);
       // console.log(prevstate);
 
-      const prevUpdate = [...prevstate];
+      const prevUpdate = [...prevState];
       prevUpdate[taskIndex] = taskUpdate;
+
+
 
       return prevUpdate;
     });
   }
 
   const taskDeletedHandler = (taskid) => {
+    // console.log(taskid);
+
+    setTasks((prevState) => {
+      const prevUpdate = prevState.filter((task) => task.id !== taskid);
+
+      // console.log(prevUpdate);
+
+      return prevUpdate;
+    })
+  }
+
+  const taskUndoHandler = (taskid) => {
     console.log(taskid);
   }
 
@@ -72,7 +86,9 @@ const App = () => {
         ontaskCompleted={taskCompletedHandler}
         taskDeletedHandler={taskDeletedHandler} />
 
-      <Right data={data} />
+      <Right
+        data={data}
+        ontaskUndo={taskUndoHandler} />
 
     </div>
   );

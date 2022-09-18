@@ -4,9 +4,16 @@ import TaskComplete from './TaskComplete';
 
 
 const TasksCompleted = (props) => {
-   // const data = [{}]; ayan ka siinayay data ii taala app ka, imikana wxn ka siinaya habka props 
+    // const data = [{}]; ayan ka siinayay data ii taala app ka, imikana wxn ka siinaya habka props 
 
     const tasksCompleted = props.data.filter((tasks) => tasks.isCompleted === true);
+
+    const istaskUndo = (id) => {
+        console.log(id);
+
+        // props.ontaskUndo(id);
+
+    }
 
     return (
         <section id="completed-tasks" className='mt-3 mx-3 p-1 font-RobotoSlab'>
@@ -21,7 +28,8 @@ const TasksCompleted = (props) => {
                     title={task.title}
                     category={task.category}
                     date={task.date}
-                    status={task.status} />
+                    status={task.status}
+                    ontaskUndo={istaskUndo} />
                 ))}
             </div>
         </section>

@@ -1,6 +1,5 @@
 import Header from './Header';
 import Content from './Content/Content';
-import Tasks from './Content/Tasks/Tasks';
 
 const Main = (props) => {
 
