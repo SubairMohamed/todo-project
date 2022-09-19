@@ -25,6 +25,10 @@ const Content = (props) => {
         props.onUploadData(taskdata);
     };
 
+    const isTaskCompleted = (id) => {
+        props.onTaskCompleted(id);
+    }
+
     const openform = () => {
         setShowForm(true);
     }
@@ -32,8 +36,6 @@ const Content = (props) => {
     const closeform = () => {
         setShowForm(false);
     }
-
-
 
     const istaskDeleted = (id) => {
         props.taskDeletedHandler(id);
@@ -48,7 +50,7 @@ const Content = (props) => {
             <Tasks Onopenform={openform}
                 showform={showform}
                 tasks={props.tasks}
-
+                isTaskCompleted={isTaskCompleted}
                 istaskDeleted={istaskDeleted} />
 
         </main>

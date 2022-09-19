@@ -15,7 +15,7 @@ const Main = (props) => {
             <Header />
             <Content onUploadData={uploadDataHandler}
                 tasks={props.tasks}
-
+                onTaskCompleted={props.onTaskCompleted}
                 taskDeletedHandler={props.taskDeletedHandler} />
 
 
