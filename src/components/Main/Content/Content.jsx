@@ -33,10 +33,7 @@ const Content = (props) => {
         setShowForm(false);
     }
 
-    const istaskCompleted = (id) => {
-        // console.log(id);
-        props.ontaskCompleted(id);
-    }
+
 
     const istaskDeleted = (id) => {
         props.taskDeletedHandler(id);
@@ -51,7 +48,7 @@ const Content = (props) => {
             <Tasks Onopenform={openform}
                 showform={showform}
                 tasks={props.tasks}
-                istaskCompleted={istaskCompleted}
+
                 istaskDeleted={istaskDeleted} />
 
         </main>
