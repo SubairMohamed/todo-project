@@ -36,11 +36,11 @@ const App = () => {
   const taskCompletedHandler = (taskid) => {
     setTasks((prevState) => {
 
-      const task = prevState.find((task) => task.id === taskid)
+      const tasks = prevState.find((task) => task.id === taskid)
 
 
       const taskUpdate = {
-        ...task,
+        ...tasks,
         isCompleted: true,
         status: "completed",
       }
@@ -71,7 +71,7 @@ const App = () => {
     // console.log(taskid);
 
     setTasks((prevState) => {
-      const taskUndo = prevState.find((task) => task.id === taskid);
+      const tasks = prevState.find((task) => task.id === taskid);
 
       // console.log(taskUndo);
 
@@ -93,7 +93,7 @@ const App = () => {
 
 
   return (
-    <div className="flex min-h-screen w-screen bg-sky-900">
+    <div className="flex w-screen min-h-screen bg-sky-900">
       <Left />
 
       <Main onUploadData={SaveUploadData}

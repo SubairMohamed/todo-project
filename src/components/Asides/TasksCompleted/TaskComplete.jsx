@@ -9,21 +9,21 @@ const TasksCompleted = (props) => {
 
     return (
         // Task 
-        <div id="task" className="card-task border-l-4 border-teal-400 flex items-center justify-between max-w-lg w-full opacity-75 relative line-through">
+        <div id="task" className="relative flex items-center justify-between w-full max-w-lg line-through border-l-4 border-teal-400 opacity-75 card-task">
             <div id="left-side" className='w-full'>
-                <div id="category" className='flex justify-between items-center w-full px-2'>
+                <div id="category" className='flex items-center justify-between w-full px-2'>
                     <h5 className="tracking-wide underline">{props.title}</h5>
                     <div className="flex items-center gap-2">
-                        <CalendarIcon className="h-5 w-5" />
+                        <CalendarIcon className="w-5 h-5" />
                         <span className="tracking-wide">{props.date}</span>
                     </div>
                 </div>
                 <div id="content" className="mb-5">
-                    <h1 className="tracking-wide font-bold mb-1">{props.category}</h1>
-                    <div className='absolute bottom-1 left-0 right-0 w-full'>
-                        <div id='wrap' className='flex justify-between items-center w-full px-4'>
-                            <span className='capitalize font-RobotoSlab font-bold tracking-wide mt-1'>{props.status}</span>
-                            <span className='flex justify-center items-center gap-1 text-red-500 hover:bg-red-500 hover:text-white px-1 hover:rounded-full cursor-pointer' onClick={istaskCompletedUndo}><ReplyIcon className='w-5 h-5' />undo</span>
+                    <h1 className="mb-1 font-bold tracking-wide">{props.category}</h1>
+                    <div className='absolute w-full bottom-1'>
+                        <div id='wrap' className='flex items-center justify-between w-full px-4'>
+                            <span className='mt-1 font-bold tracking-wide capitalize font-RobotoSlab'>{props.status}</span>
+                            <span className='flex items-center justify-center gap-1 px-1 text-red-500 cursor-pointer hover:bg-red-500 hover:text-white hover:rounded-full' onClick={istaskCompletedUndo}><ReplyIcon className='w-5 h-5' />undo</span>
                         </div>
                     </div>
                 </div>
