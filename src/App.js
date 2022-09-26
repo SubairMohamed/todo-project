@@ -33,27 +33,7 @@ const App = () => {
     });
   }
 
-  const taskCompletedHandler = (taskid) => {
-    setTasks((prevState) => {
 
-      const tasks = prevState.find((task) => task.id === taskid)
-
-
-      const taskUpdate = {
-        ...tasks,
-        isCompleted: true,
-        status: "completed",
-      }
-
-      const taskIndex = prevState.findIndex((task) => task.id === taskid);
-
-      const prevUpdate = [...prevState];
-
-      prevUpdate[taskIndex] = taskUpdate;
-
-      return prevUpdate;
-    })
-  }
 
   const taskDeletedHandler = (taskid) => {
     // console.log(taskid);
@@ -67,29 +47,7 @@ const App = () => {
     })
   };
 
-  const taskUndoHandler = (taskid) => {
-    // console.log(taskid);
-
-    setTasks((prevState) => {
-      const tasks = prevState.find((task) => task.id === taskid);
-
-      // console.log(taskUndo);
-
-      const taskUpdate = {
-        ...tasks,
-        isCompleted: false,
-        status: "in progress",
-      }
-
-      const taskIndex = prevState.findIndex((task) => task.id === taskid);
-      // console.log(taskIndex, taskUpdate);
-
-      const prevUpdate = [...prevState];
-      prevUpdate[taskIndex] = taskUpdate;
-
-      return prevUpdate;
-    })
-  };
+  
 
 
   return (
@@ -98,12 +56,10 @@ const App = () => {
 
       <Main onUploadData={SaveUploadData}
         tasks={tasks}
-        onTaskCompleted={taskCompletedHandler}
         taskDeletedHandler={taskDeletedHandler} />
 
       <Right
-        data={data}
-        ontaskUndo={taskUndoHandler} />
+        data={data} />
 
     </div>
   );
