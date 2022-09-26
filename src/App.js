@@ -33,6 +33,28 @@ const App = () => {
     });
   }
 
+  const taskComplete = (taskid) => {
+    // console.log(taskid);
+    setTasks((prevState) => {
+
+      const task = prevState.find((task) => task.id === taskid);
+
+      const taskUpdate = {
+        ...task,
+        isCompleted: true,
+        status: "Completed",
+      }
+      // console.log(taskUpdate,tasks);
+
+     const taskIndex = prevState.findIndex((tasks) => tasks.id === taskid);
+
+    const prevUpdate = [...prevState];
+    prevUpdate[taskIndex] = taskUpdate;     
+   
+
+      return prevUpdate;
+    })
+  }
 
 
   const taskDeletedHandler = (taskid) => {
@@ -56,6 +78,7 @@ const App = () => {
 
       <Main onUploadData={SaveUploadData}
         tasks={tasks}
+        taskComplete={taskComplete}
         taskDeletedHandler={taskDeletedHandler} />
 
       <Right

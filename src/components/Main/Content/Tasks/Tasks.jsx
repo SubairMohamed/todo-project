@@ -24,6 +24,7 @@ const Tasks = (props) => {
                             category={tasks.category}
                             date={tasks.date}
                             status={tasks.status}
+                            istaskComplete={props.istaskComplete}
                             istaskDeleted={props.istaskDeleted} />
                     );
                 })}
