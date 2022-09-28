@@ -3,7 +3,7 @@ import { ReplyIcon } from '@heroicons/react/solid';
 
 const TasksCompleted = (props) => {
 
-    const istaskCompletedUndo = () => {
+    const istaskUndo = () => {
         props.istaskUndo(props.id);
     }
 
@@ -23,7 +23,7 @@ const TasksCompleted = (props) => {
                     <div className='absolute w-full bottom-1'>
                         <div id='wrap' className='flex items-center justify-between w-full px-4'>
                             <span className='mt-1 font-bold tracking-wide capitalize font-RobotoSlab'>{props.status}</span>
-                            <span className='flex items-center justify-center gap-1 px-1 text-red-500 cursor-pointer hover:bg-red-500 hover:text-white hover:rounded-full' onClick={istaskCompletedUndo}><ReplyIcon className='w-5 h-5' />undo</span>
+                            <span className='flex items-center justify-center gap-1 px-1 text-red-500 cursor-pointer hover:bg-red-500 hover:text-white hover:rounded-full' onClick={istaskUndo}><ReplyIcon className='w-5 h-5' />undo</span>
                         </div>
                     </div>
                 </div>

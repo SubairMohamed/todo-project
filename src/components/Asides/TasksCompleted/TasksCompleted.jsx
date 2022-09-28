@@ -10,7 +10,7 @@ const TasksCompleted = (props) => {
 
     const istaskUndo = (id) => {
         // console.log(id);
-        props.ontaskUndo(id);
+        props.taskUndo(id);
 
     }
 
@@ -25,12 +25,12 @@ const TasksCompleted = (props) => {
                 {tasksCompleted.map((task) => {
                     return (
                         <TaskComplete
+                            id={task.id}
                             key={task.id}
                             title={task.title}
                             category={task.category}
                             date={task.date}
                             status={task.status}
-                            id={task.id}
                             istaskUndo={istaskUndo} />
                     );
                 })}

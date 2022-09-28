@@ -18,9 +18,9 @@ const Tasks = (props) => {
                 {tasks.map((tasks) => {
                     return (
                         <Task
+                            id={tasks.id}
                             key={tasks.id}
                             title={tasks.title}
-                            id={tasks.id}
                             category={tasks.category}
                             date={tasks.date}
                             status={tasks.status}

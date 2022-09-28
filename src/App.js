@@ -69,6 +69,25 @@ const App = () => {
     })
   };
 
+  const taskUndo = (taskid) => {
+    setTasks((prevState) => {
+      const tasks = prevState.find((task) => task.id === taskid);
+
+      const taskUpdate = {
+        ...tasks,
+        isCompleted: false,
+        status: "in progress"
+      }
+   
+      const taskIndex = prevState.findIndex((task) => task.id === taskid);
+      
+      const prevUpdate = [...prevState];
+      prevUpdate[taskIndex] = taskUpdate;
+      
+      return prevUpdate;
+    })
+  }
+
   
 
 
@@ -82,7 +101,8 @@ const App = () => {
         taskDeletedHandler={taskDeletedHandler} />
 
       <Right
-        data={data} />
+        data={data}
+        taskUndo={taskUndo} />
 
     </div>
   );
