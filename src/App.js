@@ -37,10 +37,10 @@ const App = () => {
     // console.log(taskid);
     setTasks((prevState) => {
 
-      const task = prevState.find((task) => task.id === taskid);
+      const Task = prevState.find((task) => task.id === taskid);
 
       const taskUpdate = {
-        ...task,
+        ...Task,
         isCompleted: true,
         status: "Completed",
       }
@@ -71,10 +71,10 @@ const App = () => {
 
   const taskUndo = (taskid) => {
     setTasks((prevState) => {
-      const tasks = prevState.find((task) => task.id === taskid);
+      const Task = prevState.find((task) => task.id === taskid);
 
       const taskUpdate = {
-        ...tasks,
+        ...Task,
         isCompleted: false,
         status: "in progress"
       }
@@ -83,7 +83,7 @@ const App = () => {
       
       const prevUpdate = [...prevState];
       prevUpdate[taskIndex] = taskUpdate;
-      
+
       return prevUpdate;
     })
   }
